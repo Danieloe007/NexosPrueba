@@ -1,0 +1,40 @@
+﻿@model AutorDTO
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<div style="margin:40px;">
+    <h1>Detalle Autor </h1>
+    <hr />
+
+    <div class="form-group">
+        <label>ID: </label>
+        @Model.IdAutor
+    </div>
+    <div class="form-group">
+        <label>Nombre: </label>
+        @Model.Nombre
+    </div>
+    <div class="form-group">
+        <label>Fecha Nacimiento: </label>
+        @Model.FechaNacimiento
+    </div>
+    <div class="form-group">
+        <label>Ciudad: </label>
+        @Model.Ciudad
+    </div>
+    <div class="form-group">
+        <label>Correo Electronico: </label>
+        @Model.CorreoElectronico
+    </div>
+   
+
+    <div class="form-group">
+        <a href="@Url.Action("Index","Autor")">Regresar</a>
+    </div>
+
+    <a href="@Url.Action("Actualizar","Autor", new { id= Model.IdAutor})" class="btn btn-success right">Actualizar</a>
+    <a href="@Url.Action("Eliminar","Autor", new { id= Model.IdAutor})" class="btn btn-danger right">Eliminar</a>
+</div>
+
+

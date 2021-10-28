@@ -1,0 +1,39 @@
+﻿@model LibroDTO
+@{
+    ViewBag.Title = "Nuevo";
+}
+
+<div style="margin:40px;">
+    <h2>Nuevo Libro</h2>
+    <hr />
+    <form method="post" action="@Url.Action("Nuevo","Libro")">
+        <div class="form-group">
+            <label>Titulo</label>
+            @Html.TextBoxFor(x => x.Titulo, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Año</label>
+            @Html.TextBoxFor(x => x.Año, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Genero</label>
+            @Html.TextBoxFor(x => x.Genero, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Numero Paginas</label>
+            @Html.TextBoxFor(x => x.NumeroPaginas, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>IdAutor</label>
+            @Html.TextBoxFor(x => x.IdAutor, new { @class = "form-control" })
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Enviar" />
+            <a href="@Url.Action("Index","Libro")">Regresar</a>
+        </div>
+
+    </form>
+
+</div>
+
