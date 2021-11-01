@@ -151,6 +151,7 @@
     <Content Include="Views\Libro\Nuevo.cshtml" />
     <Content Include="Views\Libro\Actualizar.cshtml" />
     <Content Include="Views\Libro\Detalle.cshtml" />
+    <Content Include="Views\Libro\NuevoError.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

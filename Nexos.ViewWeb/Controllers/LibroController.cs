@@ -12,6 +12,8 @@ namespace Nexos.ViewWeb.Controllers
 {
     public class LibroController : Controller
     {
+        public int conteoLibro = 0;
+        public static int ValorGlobal { get; set; } = 5;
         // GET: Libro
         public ActionResult Index()
         {
@@ -23,7 +25,10 @@ namespace Nexos.ViewWeb.Controllers
             {
                 var resultString = request.Content.ReadAsStringAsync().Result;
                 var listaLibros = JsonConvert.DeserializeObject<List<LibroDTO>>(resultString);
+                ValorGlobal = listaLibros.Count;
+
                 return View(listaLibros);
+               
             }
             return View(new List<LibroDTO>());
         }
@@ -36,22 +41,33 @@ namespace Nexos.ViewWeb.Controllers
         [HttpPost]
         public ActionResult Nuevo(LibroDTO libro)
         {  
+
             HttpClient clienteHttp = new HttpClient();
             clienteHttp.BaseAddress = new Uri("http://localhost:61790/");
-            var request = clienteHttp.PostAsync("api/Libro", libro, new JsonMediaTypeFormatter()).Result;
+            int conteo2 = ValorGlobal;
 
-            if (request.IsSuccessStatusCode)
+            if (conteo2 < 3)
             {
-                var resultString = request.Content.ReadAsStringAsync().Result;
-                var insertado = JsonConvert.DeserializeObject<bool>(resultString);
-                if (insertado)
-                {
-                    return RedirectToAction("Index");
-                }
-                return View(libro);
-            }
-            return View(libro);
+                var request = clienteHttp.PostAsync("api/Libro", libro, new JsonMediaTypeFormatter()).Result;
 
+                if (request.IsSuccessStatusCode)
+                {
+                    var resultString = request.Content.ReadAsStringAsync().Result;
+                    var insertado = JsonConvert.DeserializeObject<bool>(resultString);
+                    if (insertado)
+                    {
+                        return RedirectToAction("Index");
+                    }
+                    return View(libro);
+                }
+            }
+            
+            return View("NuevoError");
+
+        }
+        public ActionResult NuevoError()
+        {
+            return View();
         }
 
         [HttpGet]
