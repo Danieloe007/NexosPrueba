@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="NexosPruebaModelStoreContainer" CdmEntityContainer="NexosPruebaEntities">
+    <EntitySetMapping Name="Libro">
+      <EntityTypeMapping TypeName="NexosPruebaModel.Libro">
+        <MappingFragment StoreEntitySet="Libro">
+          <ScalarProperty Name="CorreoElectronicoAutor" ColumnName="CorreoElectronicoAutor" />
+          <ScalarProperty Name="CiudadAutor" ColumnName="CiudadAutor" />
+          <ScalarProperty Name="FechaNacimientoAutor" ColumnName="FechaNacimientoAutor" />
+          <ScalarProperty Name="NomAutor" ColumnName="NomAutor" />
+          <ScalarProperty Name="NumPaginas" ColumnName="NumPaginas" />
+          <ScalarProperty Name="Genero" ColumnName="Genero" />
+          <ScalarProperty Name="Año" ColumnName="Año" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="IdLibro" ColumnName="IdLibro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

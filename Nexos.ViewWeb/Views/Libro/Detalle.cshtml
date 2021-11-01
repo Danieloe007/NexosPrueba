@@ -1,0 +1,54 @@
+﻿@model LibroDTO
+@{
+    ViewBag.Title = "Detalle";
+}
+
+<div style="margin:40px;">
+    <h1>Detalle Libro </h1>
+    <hr />
+
+    <div class="form-group">
+        <label>ID: </label>
+        @Model.IdLibro
+    </div>
+    <div class="form-group">
+        <label>Titulo: </label>
+        @Model.Titulo
+    </div>
+    <div class="form-group">
+        <label>Año: </label>
+        @Model.Año
+    </div>
+    <div class="form-group">
+        <label>Genero: </label>
+        @Model.Genero
+    </div>
+    <div class="form-group">
+        <label>Num Paginas: </label>
+        @Model.NumPaginas
+    </div>
+    <div class="form-group">
+        <label>Nombre  Autor: </label>
+        @Model.NomAutor
+    </div>
+    <div class="form-group">
+        <label>Fecha Nacimiento Autor: </label>
+        @Model.FechaNacimientoAutor
+    </div>
+    <div class="form-group">
+        <label>Ciudad Autor: </label>
+        @Model.CiudadAutor
+    </div>
+    <div class="form-group">
+        <label>Email Autor: </label>
+        @Model.CorreoElectronicoAutor
+    </div>
+
+    <div class="form-group">
+        <a href="@Url.Action("Index","Libro")">Regresar</a>
+    </div>
+
+    <a href="@Url.Action("Actualizar","Libro", new { id= Model.IdLibro})" class="btn btn-success right">Actualizar</a>
+    <a href="@Url.Action("Eliminar","Libro", new { id= Model.IdLibro})" class="btn btn-danger right">Eliminar</a>
+</div>
+

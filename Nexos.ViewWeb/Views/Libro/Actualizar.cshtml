@@ -1,0 +1,57 @@
+﻿@model LibroDTO
+@{
+    ViewBag.Title = "Actualizar";
+}
+
+<h2>Actualizar</h2>
+
+<div style="margin:40px;">
+    <h2>Nuevo Libro</h2>
+    <hr />
+    <form method="post" action="@Url.Action("Actualizar","Libro")">
+        <div class="form-group">
+            <label>ID Libro</label>
+            @Html.TextBoxFor(x => x.IdLibro, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Titulo</label>
+            @Html.TextBoxFor(x => x.Titulo, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Año</label>
+            @Html.TextBoxFor(x => x.Año, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Genero</label>
+            @Html.TextBoxFor(x => x.Genero, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Numero Paginas</label>
+            @Html.TextBoxFor(x => x.NumPaginas, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Nombre Autor</label>
+            @Html.TextBoxFor(x => x.NomAutor, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Fecha Nacimiento Autor</label>
+            @Html.TextBoxFor(x => x.FechaNacimientoAutor, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Ciudad  Autor</label>
+            @Html.TextBoxFor(x => x.CiudadAutor, new { @class = "form-control" })
+        </div>
+        <div class="form-group">
+            <label>Email Autor</label>
+            @Html.TextBoxFor(x => x.CorreoElectronicoAutor, new { @class = "form-control" })
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Enviar" />
+            <a href="@Url.Action("Index","Libro")">Regresar</a>
+        </div>
+
+    </form>
+
+</div>
+
