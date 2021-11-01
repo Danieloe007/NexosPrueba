@@ -1,6 +1,0 @@
-C:\Users\danie\source\repos\Nexos\Nexos.Dominio\bin\Debug\Nexos.Dominio.dll
-C:\Users\danie\source\repos\Nexos\Nexos.Dominio\bin\Debug\Nexos.Dominio.pdb
-C:\Users\danie\source\repos\Nexos\Nexos.Dominio\obj\Debug\Nexos.Dominio.csproj.CoreCompileInputs.cache
-C:\Users\danie\source\repos\Nexos\Nexos.Dominio\obj\Debug\Nexos.Dominio.dll
-C:\Users\danie\source\repos\Nexos\Nexos.Dominio\obj\Debug\Nexos.Dominio.pdb
-C:\Users\danie\source\repos\Nexos\Nexos.Dominio\obj\Debug\Nexos.Dominio.csproj.AssemblyReference.cache
