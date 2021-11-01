@@ -46,7 +46,7 @@ namespace Nexos.ViewWeb.Controllers
             clienteHttp.BaseAddress = new Uri("http://localhost:61790/");
             int conteo2 = ValorGlobal;
 
-            if (conteo2 < 3)
+            if (conteo2 < 5)//CONDICIONAL NUMERO MAXIMO DE LIBROS A REGISTRAR
             {
                 var request = clienteHttp.PostAsync("api/Libro", libro, new JsonMediaTypeFormatter()).Result;
 
